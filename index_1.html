@@ -4,42 +4,107 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        /*ตรงนี้ CSS สำหรับตกแต่ง(id class)*/
+    @font-face { /*เปลี่ยนลักษณะตัวอักษร*/
+        font-family: 'Kanit';
+        src: url('./Kanit/Kanit-Regular.ttf');
+    }
+    body {
+            font-family: 'Kanit';
+            font-size: 14px;
+            background-color: rgba(152, 174, 235, 0.712);
+        }
+    .container {
+        width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .header{
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .header-form{
+        width: 140px;
+    }
+    .flex{
+        display: flex;
+    }
+    .form-input{
+        margin-bottom: 10px;
+    }
+
+    input.form, textarea{
+        border: 2px solid rgb(18, 81, 198);
+        width: 100%;
+    }
+    .center{
+        text-align: center;
+    }
+
+    .button{
+        border: 2px solid rgb(18, 81, 198);
+        background-color: bisque;
+        width: 100%;
+        height: 40px;
+    }
+    input:focus{
+            background-color: beige;
+    }
+    
+    </style>
 </head>
 <body>
     <!--form-->
-    <h1>Register form </h1>
-    ชื่อ <input type="text">
-    นามสกุล <input type="text"> <br>
-    อายุ <input type="number" min="1" max="100">
-    <div> <br><!-- อิสระ เชียนอะไรก็ได้-->
-        เพศ
-        <div>
-            <input name="gender"type="radio"> ชาย
-        </div>
-        <div>
-            <input name="gender" type="radio"> หญิง
-        </div>
-        <div>
-            <input name="gender" type="radio"> ไม่ระบุ
-        </div>
-    </div> 
-    <div><br>
-        งานอดิเรก
-        <div>
-            <input name="hobby" type="checkbox"> อ่านหนังสือ
-        </div>
-        <div>
-            <input name="hobby" type="checkbox"> ดูหนัง
-        </div>
-        <div>
-            <input name="hobby" type="checkbox"> ฟังเพลง
-        </div>
-    </div>
-    <div><br>
-        คำอธิบาย<br>
-        <textarea></textarea>
-    </div>
-        <br><button>ส่งข้อมูล</button>
+    <div class="container">
+        <div class="header"> 
+            Register form 
+        </div> 
 
+        <div class="flex form-input">
+            <div class="header-form">ชื่อ</div>
+            <input class="form" type="text">
+        </div>
+
+        <div class="flex form-input">
+            <div class="header-form">นามสกุล</div>
+            <input class="form" type="text">
+        </div>
+
+        <div class="flex form-input">
+            <div class="header-form">อายุ</div>
+            <input class="form" type="number" min="1" max="100">
+        </div>
+
+        <div class="flex form-input"> <!-- อิสระ เชียนอะไรก็ได้-->
+            <div class="header-form">เพศ</div>
+            <div>
+                <input name="gender"type="radio"> ชาย
+                <input name="gender" type="radio"> หญิง
+                <input name="gender" type="radio"> ไม่ระบุ
+            </div>
+        </div> 
+        <div class="form-input">
+            <div class="header-form">งานอดิเรก</div>
+            <div>
+                <input name="interest" type="checkbox"> อ่านหนังสือ
+            </div>
+            <div>
+                <input name="interest" type="checkbox"> ดูหนัง
+            </div>
+            <div>
+                <input name="interest" type="checkbox"> ฟังเพลง
+            </div>
+        </div>
+        <div class="form-input">
+            คำอธิบาย<br>
+            <textarea></textarea>
+        </div>
+        <div class="center">
+            <button class="button">ส่งข้อมูล</button>
+        </div> 
+    </div>
 </body>
 </html>
