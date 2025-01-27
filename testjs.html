@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--((27/1))เรียน-- ต้องการไปเอาค่าใน value(ค่าที่ผู้ใช้กรอก)มาเก็บไว้ และ แสดงข้อความเตือนเมื่อใส่ข้อมูลผิดพลาด-->
+
+    <!-- (1) การเอาค่าจาก value-->
+    <!-- ชื่อ <input 
+        type="text" 
+        name="firstname" 
+        value="Natcha" > -->
+    <!-- นามสกุล <input 
+        id="lastname" 
+        class="input"
+        type="text" 
+        name="lastname" 
+        value="Runsri" > -->
+    <!-- ความสนใจ //เลือกแสดงค่าที่ติ้ก-->
+    <!-- <input type="checkbox" name="interest" value="อ่านหนังสือ"> อ่านหนังสือ
+    <input type="checkbox" name="interest" value="ดูหนัง"> ดูหนัง
+    <input type="checkbox" name="interest" value="ฟังเพลง"> ฟังเพลง --> 
+    <!-- <script>
+        //  1.getElementById กำหนดค่าไอดีเพื่อแสดงค่าที่เก็บใน value
+        // let fnameDom = document.getElementById('firstname');
+        // console.log(fnameDom.value); /*ต้องกำหนดid*/
+
+        //  2.getElementsByClassName กำหนดคลาสขึ้นมาเพื่อแสดงค่า 
+        // let inputDom = document.getElementsByClassName('input');
+        // console.log(inputDom);
+        // for (let i=0; i<inputDom.length; i++){
+        //     console.log(inputDom[i].value);
+        // } //ใช้ for loop เพื่อแสดงค่าที่เก็บใน value ภายใต้คลาสชื่อinput 
+
+        // 3.querySelector เลือกค่าเฉพาะที่เก็บในตัวแปรfirstname มาแสดง
+        // let firstnameDom = document.querySelector('#firstname');
+        // console.log(firstnameDom.value);
+
+        // //4.เข้าถึงinputได้เลยตรงๆ โดยไม่ต้องมีไอดีกับคลาสเพื่อนเรียกใช้
+        // let firstnameDom = document.querySelector('input[name="firstname"]');
+        // console.log(firstnameDom.value);
+
+        // 5.querySelectorAll คือเอาค่าทั้งหมดในcheckboxมาแสดง ไม่ได้เลือกเฉพาะค่าที่ติ้ก
+        // let checkboxInput = document.querySelectorAll('input[name="interest"]');
+        //     for (let i=0; i<checkboxInput.length; i++){
+        //         console.log(checkboxInput[i].value);
+        //     }
+    </script> -->
+    
+
+
+    <!-- (2) java event คือ eventที่มีการตอบสนองกับผู้ใช้ ไม่ว่าจะการพิมหรือการเอาเม้าไปชี้ไปคลิก หรือย่อเมนุต่างๆ -->
+    <!-- 2.1.จับevent เมื่อมีการคลิกปุ่ม ใช้คำสั่ง onclick แสดงค่า-->
+    <!-- <button onclick="userClick()">Click me</button>
+    <div onclick="userClickdiv()">div Click</div>
+         <script>
+            function userClick(){
+                console.log('Button Click');
+            }
+            function userClickdiv(){
+                console.log('div Click');
+            }
+         </script> -->
+    <!-- 2.2.เมื่อค่า inputมีการเปลี่ยนแปลง มีคำสั่ง onchang-->
+    <!-- <input type="radio" name="gender" value="ชาย" onchange="ChangGender()"> ชาย
+    <input type="radio" name="gender" value="หญิง"  onchange="ChangGender()" > หญิง
+    <input type="radio" name="gender" value="อื่นๆ"  onchange="ChangGender()"> อื่นๆ
+    <script>
+        function ChangGender(){
+            //เลือก gender ทุก input ทั้งหมดออกมา
+            let genderInput = document.querySelectorAll('input[name= gender]');
+            let gender = '';
+            //ถ้ามี check อยู่ให้ คือเพศนั้นถูกเลือก ให้เอาvalue ของค่าที่เลือกออกมา 
+            for (let i=0; i<genderInput.length; i++){
+                if(genderInput[i].checked){
+                    // console.log(genderInput[i].value);
+                    gender = genderInput[i].value
+                }
+            }
+            // console.log('chang input');
+            console.log('Selected gender',gender);
+        }
+    </script> -->
+    <!--2.3.จับค่า value ตามจังหวะที่กดคีย์บอร์ดลงไป คำสั่งonkeydown ถ้าเป็นจังหวะปล่อยจะใช้คำสั่งonkeyup-->
+    <!-- ชื่อ<input type="text" name="firstname" onkeydown="changfirstname()">
+
+        <script>
+            function changfirstname(){
+                //เลือกไปยัง input ชื่อ firstname
+            let firstnameDom = document.querySelector('input[name=firstname]')
+                //เอา value ของ firstname ออกมา 
+                console.log('chang firstname',firstnameDom.value)
+        }
+        </script> -->
+    <!-- 2.4. ใช้คำสั่งonmouseover(ชี้), onmousedown(คลิก), onmouseup(ปล่อย)
+    <div 
+    onmouseover="overitem()" 
+    onmouseup="upitem()"
+    onmousedown="dowitem()"
+    >click here</div>
+        <script>
+            function overitem(){
+                console.log('mouse over') //เมื่อเอาเม้าไปชี้
+            }
+            function upitem(){
+                console.log('mouse up') //เมื่อปล่อยปุ่ม
+            }
+            function dowitem(){
+                console.log('mouse down') //เมื่อคลิกปุ่ม
+            }
+        </script> -->
+
+
+    
+    <!-- (3) การเข้าถึงข้อมูล ไม่ว่าจะต้องการอ่าน หรือเขียนข้อมูล-->
+    <!-- 3.1.ดึง(อ่าน)ข้อมูลทั้งหมด ด้วยคำสั่ง 'textContent'-->
+    <!-- <div id="hello">hello <span style="display: none;">abc</span></div>
+    <script>
+        let helloDom = document.getElementById('hello');
+        console.log(helloDom.textContent); //ดึงข้อความทั้งหมด
+        console.log(helloDom.innerText); //ดึงเฉพาะข้อความที่มองเห็น(ในคำสั่งspanจะไม่แสดง)
+        console.log(helloDom.innerHTML); //ดึงhtmlทั้งหมด ที่อยู่ในหัวข้อdivออกมาทั้งหมด
+    </script> -->
+
+    <!-- 3.2.การเข้าถึงข้อมูลแล้ว เขียนข้อมูล-->
+    <div>
+        <h2>สิ่งที่สนใจ</h2>
+        <div id="content"> <!--คำสั่งเรียกใช้ฟังก์ชัน-->
+        <!--แสดงสิ่งที่สนใจ-->
+        </div>
+    </div>
+    <input type="checkbox" name="interest" value="กีฬา">กีฬา
+    <input type="checkbox" name="interest" value="ดนตรี">ดนตรี
+    <input type="checkbox" name="interest" value="อาหาร">อาหาร
+    <input type="checkbox" name="interest" value="เทคโนโลยี">เทคโนโลยี
+    <button onclick="SubmitInterest()">แสดงสิ่งที่สนใจ</button>
+    <script>
+        function SubmitInterest(){
+            // เลือก checkbox ทั้งหมด
+            let interestDom = document.querySelectorAll('input[name="interest"]');
+            let contentHTML = '<ul>';
+            // เอาเฉพาะค่า value ที่เลือกออกมาแสดง แฃ้วเอาไปเก็บไว้ใน Array()
+            for (let i=0; i<interestDom.length; i++){
+                if(interestDom[i].checked){
+                    contentHTML += '<li>'+interestDom[i].value+'</li>';
+                }
+            }
+            //วนค่าที่เลือกใส่ html กลับไป/
+            contentHTML += '</ul>';
+            // console.log(contentHTML);
+
+            //ใส่ HTML ใน content 
+            let contentDom = document.getElementById('content');
+            contentDom.innerHTML = contentHTML;
+        }   
+    </script>
+</body>
+</html>
+        
