@@ -20,3 +20,7 @@ docker-compose up  // เปิด container
 docker-compose down // หยุด container
 
 Ctrl+C // ออกจาก container
+
+
+npm i body-parser
+npx nodemon node index.js 
