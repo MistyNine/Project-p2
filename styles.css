@@ -42,13 +42,28 @@ input.form, textarea{
 }
 
 .button{
-    border: 2px solid rgb(0, 0, 0);
-    background-color: rgb(163, 197, 247);
+    border: 2px solid rgb(65, 62, 62);
+    background-color: rgb(115, 153, 223);
     width: 50%;
     height: 40px;
 }
 input:focus{
     background-color: rgb(180, 194, 238);
+}
+
+.message{
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    margin-buttom: 10px;
+    display: none;
+}
+.message.success{
+    background-color: rgb(51, 195, 94);
+    display: block;
+}
+.message.danger{
+    background-color: rgb(255, 30, 30);
+    display: block;
 }
 @media screen and (max-width: 768px) {
     .flex{
