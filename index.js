@@ -39,8 +39,7 @@ window.onload = async () => {
             if(user.interest.includes(interestDoms[i].value)){
                 interestDoms[i].checked = true
             }
-        }
-        
+        } 
         
     } catch (error) {
         console.log('error', error);
@@ -49,7 +48,6 @@ window.onload = async () => {
 
 const validateData = (userData) => {
     let errors = []
-
     if (!userData.firstname) {
         errors.push('กรุณากรอกชื่อ')
     }
@@ -75,8 +73,8 @@ const submitData = async () => {
     let firstNameDom = document.querySelector('input[name=firstname]');
     let lastNameDom = document.querySelector('input[name=lastname]');
     let ageDom = document.querySelector('input[name=age]');
-    let genderDom = document.querySelector('input[name=gender]') || {};
-    let interestDoms = document.querySelectorAll('input[name=interest]')|| {};
+    let genderDom = document.querySelector('input[name=gender]:checked') || {};
+    let interestDoms = document.querySelectorAll('input[name=interest]:checked')|| {};
     let descriptionDom = document.querySelector('textarea[name=description]');
 
     let messageDom = document.getElementById('message');
@@ -114,7 +112,7 @@ const submitData = async () => {
         const response = await axios.post(`${BASE_URL}/users`, userData)
         console.log('response', response.data);
        } else{
-        const response = await axios.post(`${BASE_URL}/users/${selectedID}`, userData)
+        const response = await axios.put(`${BASE_URL}/users/${selectedID}`, userData)
         message = 'แก้ไขข้อมูลสำเร็จ'
         console.log('response', response.data);
        }
