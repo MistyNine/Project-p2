@@ -6,49 +6,123 @@
 body {
     font-family: 'Kanit';
     font-size: 14px;
-    background-color: rgba(152, 174, 235, 0.712);
+    background-color: #FFF2F2;
 }
 .container {
     width: 100%;
     max-width: 640px;
     margin-left: auto;
     margin-right: auto;
-    background-color:beige;
     padding: 20px;
     box-sizing: border-box;
 }
 .header{
     font-size: 30px;
     text-align: center;
-        margin-bottom: 20px;
+    margin-bottom: 20px;
+    color: #2A2F4F;
+    font-weight:900;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th,td{
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #2A2F4F;
+}
+th{
+    background-color: #E2BFD9;
+    color: #674188;
+}
+
+.data-form {
+    color: #694F8E;
+}
+.delete, .edit{
+    border:  solid #F7A8C4;
+    background-color: #F7A8C4;
+    color: #7D1C4A;
+    font-weight:550;
+}
+.header-back{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2A2F4F;
+    font-weight:900;
+}
+.info{
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #B03052;
+    font-weight: bold;
 }
 
 .header-form{
+    font-weight: bold;
+    font-size: 15px;
     width: 140px;
+    color: #2D336B;
+}
+.header-des{
+    font-weight: bold;
+    font-size: 15px;
+    width: 140px;
+    color: #2D336B;
+    margin-bottom: 10px;
 }
 .flex{
     display: flex;
+    color: #D76C82;
+}
+.line{
+    color: #D76C82;
 }
 .form-input{
     margin-bottom: 10px;
 }
 
 input.form, textarea{
-    border: 2px solid rgb(18, 81, 198);
+    border: 2px solid #B692C2;
     width: 100%;
+}
+
+textarea:focus, input:focus{
+    background-color: #FFCDEA;
 }
 .center{
     text-align: center;
 }
 
 .button{
-    border: 2px solid rgb(65, 62, 62);
-    background-color: rgb(115, 153, 223);
+    transition-duration: 0.4s;
+    border: 2px solid #F7A8C4;
+    background-color: #F7A8C4;
     width: 50%;
     height: 40px;
+    color: #2A2F4F;
+    font-size: 15px;
+    font-weight: bold;
+}
+.button:hover {
+    background-color: #917FB3; 
+    border: 2px solid #917FB3;
+    color: #FDE2F3;
+}
+
+.img{
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
 }
 input:focus{
-    background-color: rgb(180, 194, 238);
+    background-color: #E5BEEC;
+    
 }
 
 .message{
