@@ -1,18 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <a href="index_1.html" class="info" >Back to register</a>
+    <a href="index_1.html" class="info">Back to register</a>
     <div class="container">
         <div class="header-back"> User management page </div>
-        <div id="user"></div>
+        <table id="user-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Select</th>
+                    
+                </tr>
+            </thead>
+            <tbody id="user"> </tbody>
+        </table>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
     <script src="user.js"></script>
 </body>
+
 </html>

@@ -15,24 +15,17 @@ const loadData = async () => {
     let htmlData = `<div>`
     for (let i = 0; i < response.data.length; i++) {
         let user = response.data[i]
-        htmlData += `<div>
-        <table>
-         <tr class='header-form'>
-            <th>ID</th>
-            <th>Firstname</th>
-            <th>Lastname</th>
-            <th>Edit</th>
-            <th>Delete</th>
-        </tr>
-            <tr class='data-form'> 
-                <td class='row1'>${user.id}</td>
-                <td class='row2'>${user.firstname}</td>
+        htmlData += `
+            <tr> 
+                <td>${user.id}</td>
+                <td>${user.firstname}</td>
                 <td>${user.lastname}</td>
-                <td> <a href='index_1.html?id=${user.id}'><button class='edit'>Edit</button></a></td>
-                <td><button class='delete' data-id='${user.id}'>Delete</button></td>
-            </tr>          
-        </table>
-        </div>`
+                <td >
+                <a href='index_1.html?id=${user.id}'><button class='edit'>Edit</button></a>
+                <button class='delete' data-id='${user.id}'>Delete</button>
+                </td>
+            </tr>  
+        `
     }
     htmlData += `</div>`
     userDom.innerHTML = htmlData

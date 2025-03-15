@@ -7,6 +7,7 @@ body {
     font-family: 'Kanit';
     font-size: 14px;
     background-color: #FFF2F2;
+    background-image: url('');
 }
 .container {
     width: 100%;
@@ -14,7 +15,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding: 20px;
-    box-sizing: border-box;
+    box-sizing: border-box ;
 }
 .header{
     font-size: 30px;
@@ -22,36 +23,44 @@ body {
     margin-bottom: 20px;
     color: #2A2F4F;
     font-weight:900;
+    background-color: #F7A8C4;
 }
 table {
     border-collapse: collapse;
     width: 100%;
+    margin-bottom: 20px;
+    margin-left: 2px;
+    border-radius: 10px;
 }
-th,td{
+th, td{
     padding: 8px;
-    text-align: center;
     border-bottom: 1px solid #2A2F4F;
+    color: #674188;
+    text-align: center;
 }
 th{
-    background-color: #E2BFD9;
-    color: #674188;
+    color: #F7EFE5;
+    background-color: #674188;
+}
+tr:nth-child(odd){background-color: #E3A5C7}
+
+.delete, .edit{
+    border:  solid #B03052;
+    background-color: #B03052;
+    color: #F7EFE5;
+    font-weight:550;
+    font-size: 12px;
+    margin-right: 10px;
 }
 
-.data-form {
-    color: #694F8E;
-}
-.delete, .edit{
-    border:  solid #F7A8C4;
-    background-color: #F7A8C4;
-    color: #7D1C4A;
-    font-weight:550;
-}
 .header-back{
     font-size: 30px;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     color: #2A2F4F;
     font-weight:900;
+    background-color: #F7A8C4;
+    padding: 10px ;
 }
 .info{
     font-size: 14px;
@@ -59,6 +68,8 @@ th{
     margin-bottom: 20px;
     color: #B03052;
     font-weight: bold;
+    background-color: #F7A8C4;
+    padding: 5px ;
 }
 
 .header-form{
