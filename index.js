@@ -39,6 +39,7 @@ window.onload = async () => {
             if(user.interest.includes(interestDoms[i].value)){
                 interestDoms[i].checked = true
             }
+            
         } 
         
     } catch (error) {
@@ -98,7 +99,6 @@ const submitData = async () => {
         }
 
         console.log('submitData', userData);
-
         // const errors = validateData(userData);
         // if(errors.length > 0) {
         //     //มีerror

@@ -77,15 +77,8 @@ const validateData = (userData) => {
 //         res.status(500).json({error: 'Error fletching users'})
 //     } 
 // })
-/*
-GET /users สำหรับget users ทั้งหมดที่บันทึกไว้
-Post /users สำหรับสร้าง users ใหม่บันทึกเข้าไป 
-GET /users /:id สำหรับดึง users รายคนออกมา
-PUT /users /:id สำหรับแก้ไข user รายคน ตามidที่บันทึกเข้าไป
-Delete /users /:id สำหรับลบ user รายคน ตามidที่บันทึกเข้าไป
- */
 
-//path: /user ใช้สำหรับสร้างข้อมูลของ user ทั้งหมด GET /users สำหรับget users ทั้งหมดที่บันทึกไว้
+// GET /users /:id สำหรับดึง users รายคนออกมา
 app.get('/users/:id', async (req, res) => { 
     try {
      let id = req.params.id;
@@ -140,7 +133,7 @@ app.post('/users', async (req, res) => {
 //     user:user
 // });
 
-// GET /users /:id สำหรับดึง users รายคนออกมา
+//path: /user ใช้สำหรับสร้างข้อมูลของ user ทั้งหมด GET /users สำหรับget users ทั้งหมดที่บันทึกไว้
 app.get('/users', async (req,res) => {
     const results = await conn.query('SELECT * FROM users ')
     res.json(results[0])
@@ -151,7 +144,7 @@ app.put('/users/:id', async (req, res) => {
     try {
         let id = req.params.id;
         let updateUser = req.body;
-        const result = await conn.query('UPDATE users SET ? WHERE id = ?', [updateUser,id])
+         const result = await conn.query('UPDATE users SET ? WHERE id = ?', [updateUser,id])
         res.json({
             message: "Update  user successfully",
             data: result[0]
