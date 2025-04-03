@@ -1,0 +1,27 @@
+CREATE TABLE Users (
+  id INT(11) AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(50) NOT NULL,
+  password VARCHAR(255) NOT NULL,
+  email VARCHAR(100) NOT NULL,
+  role ENUM('Admin', 'User') DEFAULT 'User',
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE MeetingRooms (
+  id INT(11) AUTO_INCREMENT PRIMARY KEY,
+  room_name VARCHAR(100) NOT NULL,
+  capacity INT(11) NOT NULL,
+  location VARCHAR(100) DEFAULT NULL,
+  equipment TEXT DEFAULT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE bookings (
+  id INT(11) AUTO_INCREMENT PRIMARY KEY,
+  firstname VARCHAR(255) NOT NULL,
+  lastname VARCHAR(255) NOT NULL,
+  start_time DATETIME NOT NULL,
+  end_time DATETIME NOT NULL,
+  status ENUM('อนุมัติ', 'ไม่อนุมัติ', 'รออนุมัติ') NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

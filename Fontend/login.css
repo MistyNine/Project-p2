@@ -1,0 +1,116 @@
+body {
+    font-family: 'Prompt', sans-serif;
+    background-image: url('https://images.pexels.com/photos/3183183/pexels-photo-3183183.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); /* เปลี่ยน path/to/your/image.jpg เป็น path ของรูปภาพของคุณ */
+    background-size: cover; /* ปรับขนาดรูปภาพให้ครอบคลุมพื้นหลังทั้งหมด */
+    background-repeat: no-repeat; /* ไม่ทำซ้ำรูปภาพ */
+    background-position: center; /* จัดตำแหน่งรูปภาพไว้ตรงกลาง */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
+}
+.login-container {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(240, 240, 240, 0.8)); /* สร้าง gradient เงาจางๆ */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, opacity 0.5s ease-in-out;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fade-in 0.8s ease-in-out forwards;
+}
+
+@keyframes fade-in {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.login-container:hover {
+    transform: translateY(-5px);
+}
+
+h2 {
+    font-family: 'Prompt', sans-serif; /* เปลี่ยนฟอนต์เป็น Prompt */
+    margin-bottom: 30px;
+    color: #4361ee;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: calc(100% - 22px);
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Prompt', sans-serif; /* เปลี่ยนฟอนต์เป็น Prompt */
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #4895ef;
+    outline: none;
+    box-shadow: 0 0 5px rgba(67, 97, 238, 0.5);
+}
+
+.btn {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Prompt', sans-serif; /* เปลี่ยนฟอนต์เป็น Prompt */
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    background: linear-gradient(to right, #2575fc, #6a11cb);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer a {
+    color: #4361ee; /* เปลี่ยนสีลิงก์ */
+    text-decoration: none;
+    transition: color 0.3s; /* เพิ่ม transition */
+}
+
+.footer a:hover {
+    text-decoration: underline;
+    color: #4895ef;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #4895ef;
+}

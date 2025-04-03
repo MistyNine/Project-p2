@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>จองเวลาห้องประชุม</title>
+    <link rel="stylesheet" href="booking.css">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>ห้องประชุม</h2>
+            <div class="realtime-clock" id="clock">00:00:00</div>
+        </div>
+        
+        <div class="form-container">
+            <h3>จองเวลาห้องประชุม</h3>
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label for="first_name">ชื่อ:</label>
+                    <input type="text" id="firstname" name="firstname" placeholder="กรอกชื่อ" required>
+                </div>
+                <div class="form-group">
+                    <label for="last_name">นามสกุล:</label>
+                    <input type="text" id="lastname" name="lastname" placeholder="กรอกนามสกุล" required>
+                </div>
+                <div class="form-group">
+                    <label for="start_time">เวลาเริ่ม (Start Time):</label>
+                    <input type="datetime-local" id="starttime" name="starttime" required>
+                </div>
+                <div class="form-group">
+                    <label for="end_time">เวลาสิ้นสุด (End Time):</label>
+                    <input type="datetime-local" id="endtime" name="endtime" required>
+                </div>
+                <button type="submit" onclick="Data()">บันทึกการจอง</button>
+            </form>
+        </div>
+
+        <div class="calendar-container">
+            <div class="calendar-header">
+                <div class="controls">
+                    <button id="prev-month">&lt;</button>
+                    <select id="month" onchange="generateCalendar()"></select>
+                    <select id="year" onchange="generateCalendar()"></select>
+                    <button id="next-month">&gt;</button>
+                    <button id="today">วันนี้</button>
+                </div>
+            </div>
+            <table class="calendar">
+                <thead>
+                    <tr>
+                        <th>อา</th> <th>จ</th> <th>อ</th> <th>พ</th> <th>พฤ</th> <th>ศ</th> <th>ส</th>
+                    </tr>
+                </thead>
+                <tbody id="calendar-body"></tbody>
+            </table>
+            <div class="booking-events" id="booking-events">
+                <h4>รายการจองในวันที่เลือก</h4>
+                <div id="event-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="booking.js"></script>
+</body>
+</html>

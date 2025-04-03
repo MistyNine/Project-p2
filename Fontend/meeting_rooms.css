@@ -1,0 +1,91 @@
+body {
+    font-family: 'Prompt', sans-serif;
+    background-image: url('https://images.pexels.com/photos/3183183/pexels-photo-3183183.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #fff;
+    animation: fadeIn 1s ease-out; /* เพิ่ม animation fade in */
+}
+
+.form-container {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    padding: 50px;
+    width: 500px;
+    text-align: left;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #000000;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+input[type="text"], input[type="number"], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-family: 'Prompt', sans-serif;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="number"]:focus, textarea:focus {
+    border-color: #66afe9;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background-color: #5cb85c;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: 'Prompt', sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+/* เพิ่ม keyframes สำหรับ animation fade in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px); /* เลื่อนขึ้นเล็กน้อย */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

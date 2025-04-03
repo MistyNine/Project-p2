@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สมัครสมาชิก</title>
+    <link rel="stylesheet" href="register.css">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="register-container">
+        <div class="register-form">
+            <h2>สมัครสมาชิก</h2>
+            <form id="registerForm">
+                <div class="input-group">
+                    <label for="username">ชื่อผู้ใช้</label>
+                    <input type="text" id="username" name="username" placeholder="กรอกชื่อผู้ใช้ของคุณ" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">อีเมล</label>
+                    <input type="email" id="email" name="email" placeholder="กรอกอีเมลของคุณ" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">รหัสผ่าน</label>
+                    <input type="password" id="password" name="password" placeholder="กรอกรหัสผ่านของคุณ" required>
+                </div>
+                <div class="input-group">
+                    <label for="role">บทบาท</label>
+                    <select id="role" name="role">
+                        <option value="User">ผู้ใช้</option>
+                        <option value="Admin">ผู้ดูแลระบบ</option>
+                    </select>
+                </div>
+                <button type="submit" class="register-btn" onclick="register()">สมัครสมาชิก</button>
+            </form>
+            <div id="message"></div>
+            <div class="login-link">
+                <p>มีบัญชีอยู่แล้ว ? <a href="login.html">เข้าสู่ระบบ</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="register.js"></script>
+</body>
+</html>

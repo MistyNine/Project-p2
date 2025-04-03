@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting Rooms</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="databook.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">🏢</span>
+                <h1>BookMyRoom</h1>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="login.html" class="nav-link active">ล็อคเอ้าท์</a>
+                </li>
+                <li class="nav-item">
+                    <a href="report.html" class="nav-link active">รายงาน</a>
+                </li>
+                <li class="nav-item">
+                    <a href="help.html" class="nav-link active">ช่วยเหลือ</a>
+                </li>
+            </ul>
+            
+            <div class="user-actions">
+                <button class="notification-bell">
+                    🔔 
+                    <span class="notification-dot"></span>
+                </button>
+                <div class="user-profile">
+                    <div class="avatar">U</div>
+                </div>
+                <button class="mobile-menu-btn">☰</button>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <div class="container">
+        <header>
+            <h1>ระบบจองห้องประชุม</h1>
+            <p>จองห้องที่เหมาะสมสำหรับการประชุม การนำเสนอ และการทำงานร่วมกัน</p>
+        </header>
+        
+        <!-- Quick Statistics -->
+        <div class="quick-stats">
+            <div class="stat-card">
+                <div class="stat-number">7</div>
+                <div class="stat-label">ห้องทั้งหมด</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">4</div>
+                <div class="stat-label">ห้องว่าง</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">3</div>
+                <div class="stat-label">ห้องไม่ว่าง</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">12</div>
+                <div class="stat-label">การจองวันนี้</div>
+            </div>
+        </div>
+        
+        <div class="section-heading">
+            <h2 class="section-title">ห้องประชุมทั้งหมด</h2>
+        </div>
+        
+        <div class="filters">
+            <button class="filter-button active">ทั้งหมด</button>
+            <button class="filter-button">ห้องที่ว่าง</button>
+            <button class="filter-button">ขนาดเล็ก (< 10)</button>
+            <button class="filter-button">ขนาดกลาง (10-15)</button>
+            <button class="filter-button">ขนาดใหญ่ (> 15)</button>
+        </div>
+        
+        <div class="rooms-container">
+            <div class="room-card available">
+                <div class="room-image">
+                    <img src="https://i.pinimg.com/736x/01/2c/ba/012cbac6799a6019b10fe6dd2ea5960c.jpg" alt="Conference Room A" />
+                    <div class="status-badge">ว่าง</div>
+                </div>
+                <div class="room-details">
+                    <h3 class="room-name">ห้องประชุม </h3>
+                    <div class="capacity-tag">ความจุ: 10 คน</div>
+                    <div class="room-info">
+                        <div class="info-item">
+                            <i>📝</i> ไวท์บอร์ด
+                        </div>
+                        <div class="info-item">
+                            <i>🖥️</i> โปรเจคเตอร์
+                        </div>
+                    </div>
+                    <button class="book-button">จองเลย</button>
+                </div>
+            </div>
+            
+            <div class="room-card occupied">
+                <div class="room-image">
+                    <img src="https://i.pinimg.com/736x/5d/94/45/5d9445078523ac849a588b2234b2304d.jpg" alt="Board Room B" />
+                    <div class="status-badge">ไม่ว่าง</div>
+                </div>
+                <div class="room-details">
+                    <h3 class="room-name">ห้องบอร์ด </h3>
+                    <div class="capacity-tag">ความจุ: 15 คน</div>
+                    <div class="room-info">
+                        <div class="info-item">
+                            <i>📝</i> ไวท์บอร์ด
+                        </div>
+                        <div class="info-item">
+                            <i>🎥</i> วิดีโอคอนเฟอเรนซ์
+                        </div>
+                    </div>
+                    <button class="book-button" disabled>ไม่ว่าง</button>
+                </div>
+            </div>
+            
+            <div class="room-card available">
+                <div class="room-image">
+                    <img src="https://i.pinimg.com/736x/ca/4e/82/ca4e8279093b111dfaf9a6d2c1221b9e.jpg" alt="Small Meeting Room" />
+                    <div class="status-badge">ว่าง</div>
+                </div>
+                <div class="room-details">
+                    <h3 class="room-name">ห้องประชุมเล็ก</h3>
+                    <div class="capacity-tag">ความจุ: 5 คน</div>
+                    <div class="room-info">
+                        <div class="info-item">
+                            <i>📝</i> ไวท์บอร์ด
+                        </div>
+                        <div class="info-item">
+                            <i>☕</i> กาแฟ
+                        </div>
+                    </div>
+                    <button class="book-button">จองเลย</button>
+                </div>
+            </div>
+            
+            <div class="room-card available">
+                <div class="room-image">
+                    <img src="https://i.pinimg.com/736x/21/ec/04/21ec04c1a1daf9277698708d69025208.jpg" alt="Executive Room" />
+                    <div class="status-badge">ว่าง</div>
+                </div>
+                <div class="room-details">
+                    <h3 class="room-name">ห้องผู้บริหาร</h3>
+                    <div class="capacity-tag">ความจุ: 8 คน</div>
+                    <div class="room-info">
+                        <div class="info-item">
+                            <i>🖥️</i> จอสมาร์ท
+                        </div>
+                        <div class="info-item">
+                            <i>🎥</i> วิดีโอคอนเฟอเรนซ์
+                        </div>
+                    </div>
+                    <button class="book-button">จองเลย</button>
+                </div>
+            </div>
+            
+            <div class="room-card occupied">
+                <div class="room-image">
+                    <img src="https://i.pinimg.com/736x/a6/18/d1/a618d1b335f00e7ad116dc8cc4348144.jpg" alt="Training Room" />
+                    <div class="status-badge">ไม่ว่าง</div>
+                </div>
+                <div class="room-details">
+                    <h3 class="room-name">ห้องฝึกอบรม</h3>
+                    <div class="capacity-tag">ความจุ: 20 คน</div>
+                    <div class="room-info">
+                        <div class="info-item">
+                            <i>🖥️</i> คอมพิวเตอร์
+                        </div>
+                        <div class="info-item">
+                            <i>📝</i> ไวท์บอร์ด
+                        </div>
+                    </div>
+                    <button class="book-button" disabled>ไม่ว่าง</button>
+                </div>
+            </div>
+            
+            <div class="room-card available">
+                <div class="room-image">
+                    <img src="https://i.pinimg.com/736x/e1/27/c8/e127c8d5443f33838fcda2fe3799f8b2.jpg" alt="Workshop Room" />
+                    <div class="status-badge">ว่าง</div>
+                </div>
+                <div class="room-details">
+                    <h3 class="room-name">ห้องเวิร์คช็อป</h3>
+                    <div class="capacity-tag">ความจุ: 12 คน</div>
+                    <div class="room-info">
+                        <div class="info-item">
+                            <i>🛠️</i> อุปกรณ์
+                        </div>
+                        <div class="info-item">
+                            <i>📝</i> โต๊ะใหญ่
+                        </div>
+                    </div>
+                    <button class="book-button">จองเลย</button>
+                </div>
+            </div>
+            
+            <div class="room-card occupied">
+                <div class="room-image">
+                    <img src="https://i.pinimg.com/736x/59/f6/8c/59f68cd7d21d353dd49f363bbb6edd60.jpg" alt="VIP Conference Room" />
+                    <div class="status-badge">ไม่ว่าง</div>
+                </div>
+                <div class="room-details">
+                    <h3 class="room-name">ห้องประชุม VIP</h3>
+                    <div class="capacity-tag">ความจุ: 25 คน</div>
+                    <div class="room-info">
+                        <div class="info-item">
+                            <i>🖥️</i> ระบบเสียงพรีเมียม
+                        </div>
+                        <div class="info-item">
+                            <i>🥂</i> บริการอาหาร
+                        </div>
+                    </div>
+                    <button class="book-button" disabled>ไม่ว่าง</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="databook.js"></script>
+</body>
+</html>

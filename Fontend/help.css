@@ -1,0 +1,74 @@
+body {
+    font-family: 'Prompt', sans-serif;
+    background-image: url('https://modernform.cdnboost.com/stocks/inspired/c2560x1280/o7/gn/1oelo7gnfqqs04g8ccw/MDF_blog5_cover.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #fff; /* สีข้อความหลัก */
+}
+
+.contact-container {
+    background: rgba(255, 255, 255, 0.9); /* พื้นหลังฟอร์มโปร่งแสง */
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    padding: 50px;
+    width: 450px;
+    text-align: center;
+    color: #333; /* สีข้อความภายในฟอร์ม */
+}
+
+.contact-container h1 {
+    margin-bottom: 40px;
+    color: #000000; /* สีหัวข้อ */
+    font-size: 2.5em; /* ขนาดหัวข้อ */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.developer-info {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.info-group {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.info-group label {
+    width: 120px;
+    font-weight: 600;
+    color: #555;
+    text-align: left;
+    margin-right: 10px;
+}
+
+.info-group span {
+    color: #333;
+    font-size: 1.1em;
+    flex-grow: 1; /* ให้ span ขยายเต็มพื้นที่ที่เหลือ */
+}
+
+.contact-container p {
+    color: #666;
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+/* เพิ่ม animation */
+.contact-container {
+    animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

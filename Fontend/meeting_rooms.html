@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แบบฟอร์มข้อมูลห้อง</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="meeting_rooms.css"> 
+</head>
+<body>
+    <div class="form-container">
+        <h1>แบบฟอร์มข้อมูลห้อง</h1>
+        <form id="roomForm">
+            <div class="form-group">
+                <label for="room_name">ชื่อห้อง:</label>
+                <input type="text" id="room_name" name="room_name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="capacity">จำนวนผู้รองรับ:</label>
+                <input type="number" id="capacity" name="capacity" min="1" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="location">สถานที่ตั้ง:</label>
+                <input type="text" id="location" name="location" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="equipment">อุปกรณ์:</label>
+                <textarea id="equipment" name="equipment" rows="4" placeholder="รายการอุปกรณ์ที่มีในห้องนี้"></textarea>
+            </div>
+            
+            <button type="submit" onclick="submitdata()">ส่งข้อมูล</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="meeting_rooms.js"></script>
+</body>
+</html>

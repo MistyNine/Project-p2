@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน้าแอดมิน</title>
+    <link rel="stylesheet" href="admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap" rel="stylesheet">
+</head>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>ระบบจัดการแอดมิน</h1>
+
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="admin.html" >หน้าหลัก</a></li>
+                <li><a href="user.html">ไอดีผู้ใช้</a></li>
+                <li><a href="manage.html">การจัดการห้อง</a></li>
+                <li><a href="time.html">การจองเวลา</a></li>
+                <li><a href="login.html">ออกจากระบบ</a></li>
+            </ul>
+        </nav>
+        <div id="loading"></div>
+        <div class="content">
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>ไอดี</th>
+                        <th>ชื่อจริง</th>
+                        <th>นามสกุล</th>
+                        <th>เวลาเริ่ม</th>
+                        <th>เวลาลิ้นสุด</th>
+                        <th>จัดการ</th>
+                    </tr>
+                </thead>
+                <tbody id="user"> 
+                </tbody>
+    
+            </table>
+            <div id="error-message" class="message danger" style="display:none;"></div> 
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="time.js"></script>
+</body>
+</html>
